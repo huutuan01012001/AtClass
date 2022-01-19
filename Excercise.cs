@@ -29,17 +29,20 @@ namespace AtClass
             {
                 Console.Write(item+" ");
             }
-            
+            Console.WriteLine();
             
         }
         public void Ex2()
         {
             List<int> listInt = new List<int> { 1, 2, 3 ,4};
-            for (int i = 0; i < listInt.Count / 2; i++)
+            int n = listInt.Count;
+            for (int i = 0; i < n/2; i++)
             {
-                Console.Write((listInt[i]+listInt[listInt.Count-i-1])+" ");
+                listInt[i] += listInt[listInt.Count-1];
+                listInt.RemoveAt(listInt.Count - 1);
             }
-            if (listInt.Count % 2 != 0) Console.Write(listInt[listInt.Count/2]);
+            foreach(var item in listInt)
+                Console.Write(item+" ");
             Console.WriteLine();
         }
         public void Ex3()
