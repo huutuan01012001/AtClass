@@ -56,5 +56,12 @@ namespace AtClass
                 Console.Write(item);
             }
         }
+        public void Ex4()
+        {
+            ICar seat = new Seat("Lenon", "Grey");
+            ICar tesla = new Tesla("Model 3", "Red", 3);
+            Console.WriteLine(seat.ToString());
+            Console.WriteLine(tesla.ToString());
+        }
     }
 }
